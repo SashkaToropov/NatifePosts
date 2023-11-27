@@ -29,7 +29,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - Cell Registration
     
     func registerCell() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MainCell.self, forCellReuseIdentifier: MainCell.cellIdentifier)
     }
     
     // MARK: - Table View Data Source
@@ -38,9 +38,18 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         return viewModel.numberOfRowsInSection(section)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainCell.cellIdentifier,
+                                                       for: indexPath) as? MainCell else {
+              return UITableViewCell()
+          }
+        
+        let cellViewModel = cellDataSource[indexPath.row]
+        cell.setupCell(viewModel: cellViewModel)
         return cell
     }
 }

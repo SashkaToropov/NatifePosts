@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     
     var viewModel = MainViewModel()
     
-    var cellDataSource = [Post]()
+    var cellDataSource = [MainCellViewModel]()
     
     // MARK: - Lifecycle
     
@@ -50,6 +50,8 @@ class MainViewController: UIViewController {
 
         view.addSubview(tableView)
         setupTableView()
+        
+        view.addSubview(activityIndicator)
     }
     
     // MARK: - Data Binding

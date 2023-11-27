@@ -10,7 +10,7 @@ import Foundation
 class MainViewModel {
     
     var isLoading: Observable<Bool> = Observable(false)
-    var cellDataSource: Observable<[Post]> = Observable([])
+    var cellDataSource: Observable<[MainCellViewModel]> = Observable([])
     var dataSource: Posts?
     
     func numberOfRowsInSection(_ section: Int) -> Int {
@@ -25,11 +25,12 @@ class MainViewModel {
             self.isLoading.value = false
             if let posts {
                 self.dataSource = posts
+                mapCellData()
             }
         }
     }
     
     func mapCellData() {
-        cellDataSource.value = dataSource?.posts
+        cellDataSource.value = dataSource?.posts.compactMap{ MainCellViewModel($0) }
     }
 }
