@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        viewModel.getUsers()
     }
     
     private func setupViews() {
