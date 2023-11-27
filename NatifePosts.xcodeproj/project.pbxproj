@@ -20,6 +20,7 @@
 		777050B62B153700003C0429 /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B52B153700003C0429 /* MainCellViewModel.swift */; };
 		777050B82B153E75003C0429 /* RelativeTimeFormatter + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B72B153E75003C0429 /* RelativeTimeFormatter + Extension.swift */; };
 		777050BA2B153EB9003C0429 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B92B153EB9003C0429 /* Date + Extensions.swift */; };
+		777050BC2B154428003C0429 /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050BB2B154428003C0429 /* SortOrder.swift */; };
 		77F5B1DE2B0BAC1C00B394E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1DD2B0BAC1C00B394E8 /* AppDelegate.swift */; };
 		77F5B1E02B0BAC1C00B394E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1DF2B0BAC1C00B394E8 /* SceneDelegate.swift */; };
 		77F5B1E22B0BAC1C00B394E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1E12B0BAC1C00B394E8 /* MainViewController.swift */; };
@@ -41,6 +42,7 @@
 		777050B52B153700003C0429 /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
 		777050B72B153E75003C0429 /* RelativeTimeFormatter + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelativeTimeFormatter + Extension.swift"; sourceTree = "<group>"; };
 		777050B92B153EB9003C0429 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
+		777050BB2B154428003C0429 /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
 		77F5B1DA2B0BAC1C00B394E8 /* NatifePosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatifePosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F5B1DD2B0BAC1C00B394E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F5B1DF2B0BAC1C00B394E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				777050A52B1518F5003C0429 /* Posts.swift */,
+				777050BB2B154428003C0429 /* SortOrder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				7770509F2B150D61003C0429 /* MainViewController + TableView.swift in Sources */,
 				777050BA2B153EB9003C0429 /* Date + Extensions.swift in Sources */,
 				777050AF2B151D5A003C0429 /* NetworkDataFetch.swift in Sources */,
+				777050BC2B154428003C0429 /* SortOrder.swift in Sources */,
 				777050AB2B151BE7003C0429 /* NetworkError.swift in Sources */,
 				77F5B1DE2B0BAC1C00B394E8 /* AppDelegate.swift in Sources */,
 				77F5B1E02B0BAC1C00B394E8 /* SceneDelegate.swift in Sources */,

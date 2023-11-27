@@ -23,6 +23,13 @@ class MainViewController: UIViewController {
         return activityIndicator
     }()
     
+    private let sortButton: UIBarButtonItem = {
+        let sortButton = UIBarButtonItem()
+        sortButton.image = UIImage(systemName: "arrow.up.arrow.down")
+        sortButton.style = .plain
+        return sortButton
+    }()
+    
     var viewModel = MainViewModel()
     
     var cellDataSource = [MainCellViewModel]()
@@ -41,6 +48,7 @@ class MainViewController: UIViewController {
         setupViews()
         setConstraints()
         bindViewModel()
+        setupNavigationBar()
     }
     
     // MARK: - Setup Methods
@@ -52,6 +60,36 @@ class MainViewController: UIViewController {
         setupTableView()
         
         view.addSubview(activityIndicator)
+    }
+    
+    private func setupNavigationBar() {
+        title = "Natife Posts"
+        
+        let sortByDateAction = UIAction(title: "Date Posted") { _ in
+            self.sortPostsBy(.datePosted)
+        }
+        let sortByLikesAction = UIAction(title: "Likes") { _ in
+            self.sortPostsBy(.likes)
+        }
+        
+        sortButton.menu = UIMenu(
+            title: "Sort By",
+            children: [sortByDateAction, sortByLikesAction]
+        )
+        navigationItem.rightBarButtonItem = sortButton
+    }
+    
+    // MARK: - Sorting
+
+    
+    private func sortPostsBy(_ sortOrder: SortOrder) {
+        switch sortOrder {
+        case .datePosted:
+            cellDataSource.sort { $0.timeStamp > $1.timeStamp }
+        case .likes:
+            cellDataSource.sort { $0.likesCount > $1.likesCount }
+        }
+        reloadTableView()
     }
     
     // MARK: - Data Binding
