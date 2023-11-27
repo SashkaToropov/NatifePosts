@@ -15,6 +15,7 @@
 		777050AB2B151BE7003C0429 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050AA2B151BE7003C0429 /* NetworkError.swift */; };
 		777050AD2B151C1B003C0429 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050AC2B151C1B003C0429 /* NetworkRequest.swift */; };
 		777050AF2B151D5A003C0429 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050AE2B151D5A003C0429 /* NetworkDataFetch.swift */; };
+		777050B22B15222F003C0429 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B12B15222F003C0429 /* Observable.swift */; };
 		77F5B1DE2B0BAC1C00B394E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1DD2B0BAC1C00B394E8 /* AppDelegate.swift */; };
 		77F5B1E02B0BAC1C00B394E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1DF2B0BAC1C00B394E8 /* SceneDelegate.swift */; };
 		77F5B1E22B0BAC1C00B394E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1E12B0BAC1C00B394E8 /* MainViewController.swift */; };
@@ -31,6 +32,7 @@
 		777050AA2B151BE7003C0429 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		777050AC2B151C1B003C0429 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		777050AE2B151D5A003C0429 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		777050B12B15222F003C0429 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		77F5B1DA2B0BAC1C00B394E8 /* NatifePosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatifePosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F5B1DD2B0BAC1C00B394E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F5B1DF2B0BAC1C00B394E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		777050B02B152221003C0429 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				777050B12B15222F003C0429 /* Observable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		77F5B1D12B0BAC1C00B394E8 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 				77F5B1FF2B0FFEE800B394E8 /* ViewModel */,
 				777050A22B151238003C0429 /* Network */,
 				777050A72B151AD8003C0429 /* Extensions */,
+				777050B02B152221003C0429 /* Helpers */,
 				77F5B1FE2B0FFEA900B394E8 /* Supporting Files */,
 			);
 			path = NatifePosts;
@@ -218,6 +229,7 @@
 				777050A62B1518F5003C0429 /* Posts.swift in Sources */,
 				777050A92B151AEC003C0429 /* URLSession + Extensions.swift in Sources */,
 				777050A12B150F23003C0429 /* MainViewModel.swift in Sources */,
+				777050B22B15222F003C0429 /* Observable.swift in Sources */,
 				777050AD2B151C1B003C0429 /* NetworkRequest.swift in Sources */,
 				77F5B1E22B0BAC1C00B394E8 /* MainViewController.swift in Sources */,
 				7770509F2B150D61003C0429 /* MainViewController + TableView.swift in Sources */,
