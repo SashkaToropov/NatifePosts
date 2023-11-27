@@ -18,6 +18,8 @@
 		777050B22B15222F003C0429 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B12B15222F003C0429 /* Observable.swift */; };
 		777050B42B153281003C0429 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B32B153281003C0429 /* MainCell.swift */; };
 		777050B62B153700003C0429 /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B52B153700003C0429 /* MainCellViewModel.swift */; };
+		777050B82B153E75003C0429 /* RelativeTimeFormatter + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B72B153E75003C0429 /* RelativeTimeFormatter + Extension.swift */; };
+		777050BA2B153EB9003C0429 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050B92B153EB9003C0429 /* Date + Extensions.swift */; };
 		77F5B1DE2B0BAC1C00B394E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1DD2B0BAC1C00B394E8 /* AppDelegate.swift */; };
 		77F5B1E02B0BAC1C00B394E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1DF2B0BAC1C00B394E8 /* SceneDelegate.swift */; };
 		77F5B1E22B0BAC1C00B394E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5B1E12B0BAC1C00B394E8 /* MainViewController.swift */; };
@@ -37,6 +39,8 @@
 		777050B12B15222F003C0429 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		777050B32B153281003C0429 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		777050B52B153700003C0429 /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
+		777050B72B153E75003C0429 /* RelativeTimeFormatter + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelativeTimeFormatter + Extension.swift"; sourceTree = "<group>"; };
+		777050B92B153EB9003C0429 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		77F5B1DA2B0BAC1C00B394E8 /* NatifePosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatifePosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F5B1DD2B0BAC1C00B394E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F5B1DF2B0BAC1C00B394E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				777050A82B151AEC003C0429 /* URLSession + Extensions.swift */,
+				777050B72B153E75003C0429 /* RelativeTimeFormatter + Extension.swift */,
+				777050B92B153EB9003C0429 /* Date + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,9 +244,11 @@
 				777050A12B150F23003C0429 /* MainViewModel.swift in Sources */,
 				777050B22B15222F003C0429 /* Observable.swift in Sources */,
 				777050B42B153281003C0429 /* MainCell.swift in Sources */,
+				777050B82B153E75003C0429 /* RelativeTimeFormatter + Extension.swift in Sources */,
 				777050AD2B151C1B003C0429 /* NetworkRequest.swift in Sources */,
 				77F5B1E22B0BAC1C00B394E8 /* MainViewController.swift in Sources */,
 				7770509F2B150D61003C0429 /* MainViewController + TableView.swift in Sources */,
+				777050BA2B153EB9003C0429 /* Date + Extensions.swift in Sources */,
 				777050AF2B151D5A003C0429 /* NetworkDataFetch.swift in Sources */,
 				777050AB2B151BE7003C0429 /* NetworkError.swift in Sources */,
 				77F5B1DE2B0BAC1C00B394E8 /* AppDelegate.swift in Sources */,

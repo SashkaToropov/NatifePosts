@@ -14,13 +14,15 @@ class MainCellViewModel {
     var previewText: String
     var likesCount: Int
     var timeStamp: Int
+    var date: Date
     
-    init(_ user: Post) {
-        self.postID = user.postID
-        self.title = user.title
-        self.previewText = user.previewText
-        self.likesCount = user.likesCount
-        self.timeStamp = user.timeStamp
+    init(_ post: Post) {
+        self.postID = post.postID
+        self.title = post.title
+        self.previewText = post.previewText
+        self.likesCount = post.likesCount
+        self.timeStamp = post.timeStamp
+        self.date = post.date
     }
     
 }

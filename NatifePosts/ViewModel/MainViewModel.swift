@@ -17,7 +17,7 @@ class MainViewModel {
         dataSource?.posts.count ?? 0
     }
     
-    func getUsers() {
+    func getPosts() {
         isLoading.value = true
         
         NetworkDataFetch.shared.fetchPosts { [weak self] posts, _ in

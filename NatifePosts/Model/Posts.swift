@@ -26,3 +26,10 @@ struct Post: Codable {
         case likesCount = "likes_count"
     }
 }
+
+extension Post {
+    var date: Date {
+            Date(timeIntervalSince1970: TimeInterval(timeStamp))
+    }
+}
+

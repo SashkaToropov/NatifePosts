@@ -10,6 +10,8 @@ import UIKit
 
 class MainCell: UITableViewCell {
     
+    // MARK: - Properties
+    
     static var cellIdentifier: String {
         return String(describing: MainCell.self)
     }
@@ -64,7 +66,7 @@ class MainCell: UITableViewCell {
         return stackView
     }()
     
-    
+    // MARK: - Initialization
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -74,6 +76,8 @@ class MainCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - View Setup
     
     private func setupViews() {
         addSubview(stackView)
@@ -91,10 +95,12 @@ class MainCell: UITableViewCell {
         ])
     }
     
+    // MARK: - Data Binding
+    
     func setupCell(viewModel: MainCellViewModel) {
         titleLabel.text = viewModel.title
         previewLabel.text = viewModel.previewText
         likesLabel.text = "❤️ \(viewModel.likesCount)"
-        dateLabel.text = "\(viewModel.timeStamp)"
+        dateLabel.text = "\(viewModel.date.timeAgo())"
     }
 }
