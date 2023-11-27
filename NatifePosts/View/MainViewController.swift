@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // MARK: - Properties
+    
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -22,14 +24,26 @@ class MainViewController: UIViewController {
     }()
     
     var viewModel = MainViewModel()
+    
+    var cellDataSource = [Post]()
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getUsers()
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
         setConstraints()
-        viewModel.getUsers()
+        bindViewModel()
     }
+    
+    // MARK: - Setup Methods
     
     private func setupViews() {
         view.backgroundColor = .white
@@ -37,7 +51,26 @@ class MainViewController: UIViewController {
         view.addSubview(tableView)
         setupTableView()
     }
+    
+    // MARK: - Data Binding
+    
+    private func bindViewModel() {
+        viewModel.isLoading.bind { [weak self] isLoading in
+            guard let self, let isLoading else { return }
+            DispatchQueue.main.async {
+                isLoading ? self.activityIndicator.startAnimating() : self.activityIndicator.stopAnimating()
+            }
+        }
+        
+        viewModel.cellDataSource.bind { [weak self] posts in
+            guard let self = self, let posts = posts else { return }
+            self.cellDataSource = posts
+            self.reloadTableView()
+        }
+    }
 }
+
+// MARK: - Extensions
 
 extension MainViewController {
     

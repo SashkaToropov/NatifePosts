@@ -10,10 +10,11 @@ import Foundation
 class MainViewModel {
     
     var isLoading: Observable<Bool> = Observable(false)
+    var cellDataSource: Observable<[Post]> = Observable([])
     var dataSource: Posts?
     
     func numberOfRowsInSection(_ section: Int) -> Int {
-        10
+        dataSource?.posts.count ?? 0
     }
     
     func getUsers() {
@@ -26,5 +27,9 @@ class MainViewModel {
                 self.dataSource = posts
             }
         }
+    }
+    
+    func mapCellData() {
+        cellDataSource.value = dataSource?.posts
     }
 }

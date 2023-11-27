@@ -9,6 +9,8 @@ import UIKit
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: - Table View Setup
+    
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -16,12 +18,24 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         registerCell()
     }
     
+    // MARK: - Table View Reloading
+    
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    // MARK: - Cell Registration
+    
     func registerCell() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    // MARK: - Table View Data Source
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRowsInSection(section)
+        return viewModel.numberOfRowsInSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
