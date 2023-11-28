@@ -8,11 +8,13 @@
 import Foundation
 
 // MARK: - Posts
+
 struct Posts: Codable {
     var posts: [Post]
 }
 
 // MARK: - Post
+
 struct Post: Codable {
     let postID, timeStamp: Int
     let title, previewText: String
@@ -26,6 +28,8 @@ struct Post: Codable {
         case likesCount = "likes_count"
     }
 }
+
+// MARK: - Extensions
 
 extension Post {
     var date: Date {

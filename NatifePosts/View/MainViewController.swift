@@ -34,6 +34,9 @@ class MainViewController: UIViewController {
     
     var cellDataSource = [MainCellViewModel]()
     
+    var expandedPosts = [Int]()
+
+    
     // MARK: - Lifecycle
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,7 +83,6 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Sorting
-
     
     private func sortPostsBy(_ sortOrder: SortOrder) {
         switch sortOrder {

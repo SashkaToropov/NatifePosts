@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77252E7D2B166F0300093B30 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77252E7C2B166F0300093B30 /* UILabel + Extensions.swift */; };
 		7770509F2B150D61003C0429 /* MainViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770509E2B150D61003C0429 /* MainViewController + TableView.swift */; };
 		777050A12B150F23003C0429 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050A02B150F23003C0429 /* MainViewModel.swift */; };
 		777050A42B15124C003C0429 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777050A32B15124C003C0429 /* EndPoint.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77252E7C2B166F0300093B30 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 		7770509E2B150D61003C0429 /* MainViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + TableView.swift"; sourceTree = "<group>"; };
 		777050A02B150F23003C0429 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		777050A32B15124C003C0429 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				777050A82B151AEC003C0429 /* URLSession + Extensions.swift */,
 				777050B72B153E75003C0429 /* RelativeTimeFormatter + Extension.swift */,
 				777050B92B153EB9003C0429 /* Date + Extensions.swift */,
+				77252E7C2B166F0300093B30 /* UILabel + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				777050BA2B153EB9003C0429 /* Date + Extensions.swift in Sources */,
 				777050AF2B151D5A003C0429 /* NetworkDataFetch.swift in Sources */,
 				777050BC2B154428003C0429 /* SortOrder.swift in Sources */,
+				77252E7D2B166F0300093B30 /* UILabel + Extensions.swift in Sources */,
 				777050AB2B151BE7003C0429 /* NetworkError.swift in Sources */,
 				77F5B1DE2B0BAC1C00B394E8 /* AppDelegate.swift in Sources */,
 				77F5B1E02B0BAC1C00B394E8 /* SceneDelegate.swift in Sources */,

@@ -50,6 +50,27 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cellViewModel = cellDataSource[indexPath.row]
         cell.setupCell(viewModel: cellViewModel)
+        
+        cell.didExpandButtonPressed = {
+            if cell.previewLabel.numberOfLines == 0 {
+                self.expandedPosts.append(cellViewModel.postID)
+            } else {
+                self.expandedPosts.removeAll { $0 == cellViewModel.postID }
+            }
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+        let lines = cell.previewLabel.maxNumberOfLines
+        cell.expandButton.isHidden = false
+        if expandedPosts.contains(cellViewModel.postID) {
+            cell.previewLabel.numberOfLines = 0
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        } else if lines > 2 {
+            cell.previewLabel.numberOfLines = 2
+            cell.expandButton.setTitle("Expand", for: .normal)
+        } else {
+            cell.expandButton.isHidden = true
+        }
         return cell
     }
 }

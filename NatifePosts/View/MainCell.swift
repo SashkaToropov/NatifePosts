@@ -16,6 +16,8 @@ class MainCell: UITableViewCell {
         return String(describing: MainCell.self)
     }
     
+    var didExpandButtonPressed: (() -> ())?
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -70,6 +72,7 @@ class MainCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.isUserInteractionEnabled = true
         setupViews()
     }
     
@@ -80,6 +83,8 @@ class MainCell: UITableViewCell {
     // MARK: - View Setup
     
     private func setupViews() {
+        setupExpandButton()
+        
         addSubview(stackView)
         
         NSLayoutConstraint.activate([
@@ -94,6 +99,27 @@ class MainCell: UITableViewCell {
             dateLabel.widthAnchor.constraint(equalToConstant: 80)
         ])
     }
+    
+    private func expandButtonTapped() {
+        if previewLabel.numberOfLines == 2 {
+            previewLabel.numberOfLines = 0
+            expandButton.setTitle("Expand", for: .normal)
+        } else {
+            previewLabel.numberOfLines = 2
+            expandButton.setTitle("Collapse", for: .normal)
+        }
+        
+        didExpandButtonPressed?()
+    }
+    
+     func setupExpandButton() {
+        let action = UIAction { [weak self] _ in
+            self?.expandButtonTapped()
+        }
+
+        expandButton.addAction(action, for: .touchUpInside)
+    }
+
     
     // MARK: - Data Binding
     
