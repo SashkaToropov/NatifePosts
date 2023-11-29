@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.numberOfLines = 0
+        label.contentMode = .topLeft
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -101,7 +102,7 @@ class DetailViewController: UIViewController {
         titleLabel.text = detailsViewModel.title
         previewLabel.text = detailsViewModel.textContent
         likesLabel.text = "❤️ \(detailsViewModel.likesCount)"
-        dateLabel.text = "\(detailsViewModel.date)"
+        dateLabel.text = detailsViewModel.date.formatted()
     }
 }
 

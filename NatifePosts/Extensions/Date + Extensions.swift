@@ -13,4 +13,10 @@ extension Date {
                 .customFormat
                 .localizedString(for: self, relativeTo: Date())
     }
+    
+    func formatted() -> String {
+        return DateFormatter
+            .customFormat
+            .string(from: self)
+    }
 }
