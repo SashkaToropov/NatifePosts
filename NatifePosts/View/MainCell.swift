@@ -18,6 +18,8 @@ class MainCell: UITableViewCell {
     
     var didExpandButtonPressed: (() -> ())?
     
+    // MARK: UI Components
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -100,6 +102,8 @@ class MainCell: UITableViewCell {
         ])
     }
     
+    // MARK: - Button Actions
+    
     private func expandButtonTapped() {
         if previewLabel.numberOfLines == 2 {
             previewLabel.numberOfLines = 0
@@ -112,7 +116,7 @@ class MainCell: UITableViewCell {
         didExpandButtonPressed?()
     }
     
-     func setupExpandButton() {
+     private func setupExpandButton() {
         let action = UIAction { [weak self] _ in
             self?.expandButtonTapped()
         }

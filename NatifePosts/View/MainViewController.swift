@@ -94,6 +94,14 @@ class MainViewController: UIViewController {
         reloadTableView()
     }
     
+    // MARK: - Navigation
+    
+    func presentDetailsViewController(post: Post) {
+        let detailsViewModel = DetailsViewModel(post)
+        let detailsViewController = DetailViewController(detailsViewModel: detailsViewModel)
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
     // MARK: - Data Binding
     
     private func bindViewModel() {

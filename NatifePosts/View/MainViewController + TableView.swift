@@ -73,4 +73,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let dataSource = viewModel.dataSource else { return }
+        presentDetailsViewController(post: dataSource.posts[indexPath.row])
+    }
 }
