@@ -10,6 +10,7 @@
 - **iOS Development**:
   - Swift as the programming language
   - UIKit for building the user interface
+  - Building UI programmatically
   - Autolayout
   - MVVM Architecture
   - JSON decoding
