@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainCellViewModel {
+final class MainCellViewModel {
     
     var postID: Int
     var title: String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainViewModel {
+final class MainViewModel {
     
     var isLoading: Observable<Bool> = Observable(false)
     var cellDataSource: Observable<[MainCellViewModel]> = Observable([])

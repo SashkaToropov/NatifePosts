@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainCell: UITableViewCell {
+final class MainCell: UITableViewCell {
     
     // MARK: - Properties
     

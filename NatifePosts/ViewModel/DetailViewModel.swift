@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DetailsViewModel {
+final class DetailsViewModel {
     let title: String
     let textContent: String
     let likesCount: Int
