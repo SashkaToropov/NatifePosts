@@ -5,7 +5,6 @@
 //  Created by  Toropov Oleksandr on 27.11.2023.
 //
 
-import Foundation
 import UIKit
 
 final class MainCell: UITableViewCell {
@@ -22,14 +21,14 @@ final class MainCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont(name: "e-Ukraine-Bold", size: 16)
         label.numberOfLines = 0
         return label
     }()
     
     let previewLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont(name: "e-Ukraine-Regular", size: 16)
         label.textColor = .gray
         label.numberOfLines = 2
         label.sizeToFit()
@@ -37,11 +36,13 @@ final class MainCell: UITableViewCell {
     }()
     private let likesLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "e-Ukraine-Light", size: 16)
         return label
     }()
     
     private let dateLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "e-Ukraine-Light", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -50,6 +51,7 @@ final class MainCell: UITableViewCell {
         let button = UIButton()
         button.backgroundColor = .blue
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "e-Ukraine-Medium", size: 16)
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

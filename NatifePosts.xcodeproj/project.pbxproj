@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770F747C2B225A2B005D2585 /* e-Ukraine-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74772B2257CD005D2585 /* e-Ukraine-Bold.otf */; };
+		770F747D2B225A66005D2585 /* e-Ukraine-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74792B2257CD005D2585 /* e-Ukraine-Light.otf */; };
+		770F747E2B225A68005D2585 /* e-Ukraine-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74782B2257CD005D2585 /* e-Ukraine-Medium.otf */; };
+		770F747F2B225A6B005D2585 /* e-Ukraine-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F747A2B2257CD005D2585 /* e-Ukraine-Regular.otf */; };
+		770F74802B225A6E005D2585 /* e-Ukraine-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F74762B2257CD005D2585 /* e-Ukraine-Thin.otf */; };
+		770F74812B225A70005D2585 /* e-Ukraine-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 770F747B2B2257CD005D2585 /* e-Ukraine-UltraLight.otf */; };
 		77252E7D2B166F0300093B30 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77252E7C2B166F0300093B30 /* UILabel + Extensions.swift */; };
 		77252E7F2B177F7800093B30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77252E7E2B177F7800093B30 /* DetailViewController.swift */; };
 		77252E832B17801B00093B30 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77252E822B17801B00093B30 /* DetailViewModel.swift */; };
@@ -33,6 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770F74762B2257CD005D2585 /* e-Ukraine-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Thin.otf"; sourceTree = "<group>"; };
+		770F74772B2257CD005D2585 /* e-Ukraine-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Bold.otf"; sourceTree = "<group>"; };
+		770F74782B2257CD005D2585 /* e-Ukraine-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Medium.otf"; sourceTree = "<group>"; };
+		770F74792B2257CD005D2585 /* e-Ukraine-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Light.otf"; sourceTree = "<group>"; };
+		770F747A2B2257CD005D2585 /* e-Ukraine-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-Regular.otf"; sourceTree = "<group>"; };
+		770F747B2B2257CD005D2585 /* e-Ukraine-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e-Ukraine-UltraLight.otf"; sourceTree = "<group>"; };
 		77252E7C2B166F0300093B30 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 		77252E7E2B177F7800093B30 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		77252E822B17801B00093B30 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +83,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		770F74752B2257C2005D2585 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				770F74772B2257CD005D2585 /* e-Ukraine-Bold.otf */,
+				770F74792B2257CD005D2585 /* e-Ukraine-Light.otf */,
+				770F74782B2257CD005D2585 /* e-Ukraine-Medium.otf */,
+				770F747A2B2257CD005D2585 /* e-Ukraine-Regular.otf */,
+				770F74762B2257CD005D2585 /* e-Ukraine-Thin.otf */,
+				770F747B2B2257CD005D2585 /* e-Ukraine-UltraLight.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		777050A22B151238003C0429 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +170,7 @@
 		77F5B1FE2B0FFEA900B394E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				770F74752B2257C2005D2585 /* Fonts */,
 				77F5B1E62B0BAC1E00B394E8 /* Assets.xcassets */,
 				77F5B1E82B0BAC1E00B394E8 /* LaunchScreen.storyboard */,
 				77F5B1EB2B0BAC1E00B394E8 /* Info.plist */,
@@ -240,7 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				770F747E2B225A68005D2585 /* e-Ukraine-Medium.otf in Resources */,
+				770F747D2B225A66005D2585 /* e-Ukraine-Light.otf in Resources */,
 				77F5B1EA2B0BAC1E00B394E8 /* LaunchScreen.storyboard in Resources */,
+				770F74802B225A6E005D2585 /* e-Ukraine-Thin.otf in Resources */,
+				770F747C2B225A2B005D2585 /* e-Ukraine-Bold.otf in Resources */,
+				770F74812B225A70005D2585 /* e-Ukraine-UltraLight.otf in Resources */,
+				770F747F2B225A6B005D2585 /* e-Ukraine-Regular.otf in Resources */,
 				77F5B1E72B0BAC1E00B394E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

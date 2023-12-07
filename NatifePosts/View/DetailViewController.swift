@@ -13,7 +13,7 @@ final class DetailViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 30)
+        label.font = UIFont(name: "e-Ukraine-Bold", size: 30)
         label.numberOfLines = 0
         label.contentMode = .topLeft
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +22,7 @@ final class DetailViewController: UIViewController {
     
     let previewLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = UIFont(name: "e-Ukraine-Regular", size: 20)
         label.textColor = .gray
         label.numberOfLines = 0
         label.contentMode = .topLeft
@@ -32,12 +32,14 @@ final class DetailViewController: UIViewController {
     
     private let likesLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "e-Ukraine-Light", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let dateLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "e-Ukraine-Light", size: 16)
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
