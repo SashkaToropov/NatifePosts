@@ -110,7 +110,7 @@ final class DetailViewController: UIViewController {
 
 // MARK: - Constraints
 
-extension DetailViewController {
+private extension DetailViewController {
     
     private func setConstrains() {
         NSLayoutConstraint.activate([

@@ -122,7 +122,7 @@ final class MainViewController: UIViewController {
 
 // MARK: - Extensions
 
-extension MainViewController {
+private extension MainViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([

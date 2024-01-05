@@ -100,7 +100,7 @@ final class MainCell: UITableViewCell {
             likesAndDateStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 8),
             likesAndDateStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8),
             
-            dateLabel.widthAnchor.constraint(equalToConstant: 80)
+            dateLabel.widthAnchor.constraint(equalToConstant: 90)
         ])
     }
     
