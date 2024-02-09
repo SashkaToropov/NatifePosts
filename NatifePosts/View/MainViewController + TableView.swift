@@ -71,6 +71,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             cell.expandButton.isHidden = true
         }
+        
         return cell
     }
     

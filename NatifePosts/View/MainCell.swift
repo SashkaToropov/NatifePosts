@@ -50,7 +50,6 @@ final class MainCell: UITableViewCell {
     let expandButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .blue
-        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: "e-Ukraine-Medium", size: 16)
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false

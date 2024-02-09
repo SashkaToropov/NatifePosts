@@ -93,7 +93,7 @@ final class DetailViewController: UIViewController {
     
     private func setupViews() {
         title = "Detail"
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         view.addSubview(labelsStackView)
     }
