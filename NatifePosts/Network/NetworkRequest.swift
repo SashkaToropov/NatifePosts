@@ -13,8 +13,8 @@ final class NetworkRequest {
     
     private init() {}
     
-    func getData(completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
-        URLSession.shared.request(.posts) { data, _, error in
+    func getData(of endpoint: EndPoint, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) {
+        URLSession.shared.request(endpoint) { data, _, error in
             DispatchQueue.main.async {
                 if error != nil {
                     completionHandler(.failure(.invalidURL))

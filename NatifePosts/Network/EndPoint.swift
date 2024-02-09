@@ -12,6 +12,7 @@ struct EndPoint {
 }
 
 extension EndPoint {
+    
     var url: URL {
         var components = URLComponents()
         components.scheme = "https"
@@ -26,7 +27,12 @@ extension EndPoint {
 }
 
 extension EndPoint {
-    static var posts: Self {
+    
+    static func posts() -> Self {
         EndPoint(path: "main.json")
+    }
+    
+    static func detailPosts(id: Int) -> Self {
+        EndPoint(path: "posts/\(id).json")
     }
 }

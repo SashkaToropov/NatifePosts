@@ -34,20 +34,20 @@ final class MainViewController: UIViewController {
     
     var cellDataSource = [MainCellViewModel]()
     
+    var detailDataSource: DetailsViewModel?
+    
     var expandedPosts = [Int]()
-
+    
     
     // MARK: - Lifecycle
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.getPosts()
-
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupViews()
         setConstraints()
         bindViewModel()
@@ -58,7 +58,7 @@ final class MainViewController: UIViewController {
     
     private func setupViews() {
         view.backgroundColor = .systemBackground
-
+        
         view.addSubview(tableView)
         setupTableView()
         
@@ -96,7 +96,7 @@ final class MainViewController: UIViewController {
     
     // MARK: - Navigation
     
-    func presentDetailsViewController(post: Post) {
+    func presentDetailsViewController(post: DetailPost) {
         let detailsViewModel = DetailsViewModel(post)
         let detailsViewController = DetailViewController(detailsViewModel: detailsViewModel)
         navigationController?.pushViewController(detailsViewController, animated: true)
@@ -116,6 +116,11 @@ final class MainViewController: UIViewController {
             guard let self = self, let posts = posts else { return }
             self.cellDataSource = posts
             self.reloadTableView()
+            
+            viewModel.detailDataSource.bind { [weak self] detailPost in
+                guard let self = self, let detailPost = detailPost else { return }
+                self.detailDataSource = detailPost
+            }
         }
     }
 }

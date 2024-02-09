@@ -8,15 +8,18 @@
 import Foundation
 
 final class DetailsViewModel {
+    
+    let id: Int
     let title: String
     let textContent: String
     let likesCount: Int
-    let date: Date
+    let imageURL: URL?
     
-    init(_ post: Post) {
+    init(_ post: DetailPost) {
+        self.id = post.postID
         self.title = post.title
-        self.textContent = post.previewText
+        self.textContent = post.text
         self.likesCount = post.likesCount
-        self.date = post.date
-    }
+        self.imageURL = URL(string: post.postImage)
+    }   
 }

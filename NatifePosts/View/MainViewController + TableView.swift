@@ -76,7 +76,20 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let dataSource = viewModel.dataSource else { return }
-        presentDetailsViewController(post: dataSource.posts[indexPath.row])
+        
+        guard let selectedPostId = viewModel.dataSource?.posts[indexPath.row].postID else {
+            print(#function)
+            return
+        }
+        
+        viewModel.getDetailPost(for: selectedPostId) { [weak self] in
+            guard let post = self?.viewModel.dataSource1?.post else {
+                print(#function)
+                return
+            }
+            self?.presentDetailsViewController(post: post)
+        }
+
+        print(selectedPostId)
     }
 }
